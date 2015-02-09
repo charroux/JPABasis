@@ -4,12 +4,14 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Rent {
 	
-	private Date begin;
-	private Date end;
+	private Date beginRent;
+	private Date endRent;
 	private long key;
 	
 	@Id
@@ -20,18 +22,23 @@ public class Rent {
 	public void setKey(long key) {
 		this.key = key;
 	}
-	
-	public Date getBegin() {
-		return begin;
+
+	@Temporal(TemporalType.DATE)
+	public Date getBeginRent() {
+		return beginRent;
 	}
-	public void setBegin(Date begin) {
-		this.begin = begin;
+
+	public void setBeginRent(Date beginRent) {
+		this.beginRent = beginRent;
 	}
-	public Date getEnd() {
-		return end;
+
+	@Temporal(TemporalType.DATE)
+	public Date getEndRent() {
+		return endRent;
 	}
-	public void setEnd(Date end) {
-		this.end = end;
+
+	public void setEndRent(Date endRent) {
+		this.endRent = endRent;
 	}
 	
 	
