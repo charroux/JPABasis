@@ -6,6 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Rent {
@@ -13,6 +16,17 @@ public class Rent {
 	private long key;
 	private Date begin;
 	private Date end;
+	
+	Person person;
+	
+	@ManyToOne
+	public Person getPerson() {
+		return person;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
+	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,6 +38,7 @@ public class Rent {
 		this.key = key;
 	}
 
+	@Temporal(TemporalType.DATE)
 	public Date getBegin() {
 		return begin;
 	}
@@ -32,6 +47,7 @@ public class Rent {
 		this.begin = begin;
 	}
 
+	@Temporal(TemporalType.DATE)
 	public Date getEnd() {
 		return end;
 	}
