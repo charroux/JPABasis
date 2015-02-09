@@ -14,5 +14,5 @@ public class Van extends Vehicule{
 	public void setMaxWeight(int maxWeight) {
 		this.maxWeight = maxWeight;
 	}
-
+	
 }

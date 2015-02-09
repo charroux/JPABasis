@@ -3,10 +3,10 @@ package com.efrei;
 import javax.persistence.Entity;
 
 @Entity
-public class Car extends Vehicule{
+public class Car extends Vehicule {
 
 	private int numberOfSeats;
-
+	
 	public int getNumberOfSeats() {
 		return numberOfSeats;
 	}
@@ -14,5 +14,6 @@ public class Car extends Vehicule{
 	public void setNumberOfSeats(int numberOfSeats) {
 		this.numberOfSeats = numberOfSeats;
 	}
+
 	
 }

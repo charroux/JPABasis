@@ -26,17 +26,6 @@ public class App
 		Person person = new Person();
 		person.setName("Tintin");
 		
-		Rent rent1 = new Rent();
-		Calendar calendar = Calendar.getInstance();
-		Date maitenant = calendar.getTime();
-		rent1.setBegin(maitenant);
-		calendar.set(Calendar.DAY_OF_MONTH, 15);
-		Date retour = calendar.getTime();
-		rent1.setEnd(retour);
-		
-		person.addRent(rent1);
-
-		entityManager.persist(rent1);
 		entityManager.persist(person);
 		
 		tx.commit();
