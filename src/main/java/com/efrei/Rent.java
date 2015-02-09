@@ -3,7 +3,10 @@ package com.efrei;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -14,7 +17,19 @@ public class Rent {
 	private Date endRent;
 	private long key;
 	
+	Person person;
+	
+	@ManyToOne
+	public Person getPerson() {
+		return person;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public long getKey() {
 		return key;
 	}
