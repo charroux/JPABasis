@@ -18,6 +18,7 @@ public class Rent {
 	private long key;
 	
 	Person person;
+	Vehicule vehicule;
 	
 	@ManyToOne
 	public Person getPerson() {
@@ -26,6 +27,15 @@ public class Rent {
 
 	public void setPerson(Person person) {
 		this.person = person;
+	}
+
+	@ManyToOne
+	public Vehicule getVehicule() {
+		return vehicule;
+	}
+
+	public void setVehicule(Vehicule vehicule) {
+		this.vehicule = vehicule;
 	}
 
 	@Id
