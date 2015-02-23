@@ -45,7 +45,7 @@ public class App
 		
 		Car car = new Car();
 		car.setNumberOfSeats(5);
-		car.setPlateNumber("EE 15 ERR");
+		car.setPlateNumber("EE 15 CC");
 		
 		/*List<Rent> rents = new ArrayList<Rent>();
 		rents.add(rent1);
@@ -59,10 +59,10 @@ public class App
 		
 		tx.commit();
 		
-		Car car1 = entityManager.find(Car.class, "EE 15 ERR");
+		Car car1 = entityManager.find(Car.class, "EE 15 CC");
 		System.out.println(car1);
 		
-		Person person1 = (Person)entityManager.createQuery("select p from Person p where p.name like 'Tintin'").getSingleResult();
-		System.out.println(person1);
+		List<Person> persons = (List<Person>)entityManager.createQuery("select p from Person p where p.name like 'Tintin'").getResultList();
+		System.out.println(persons.get(0));
 	}
 }
