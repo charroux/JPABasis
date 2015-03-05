@@ -1,5 +1,8 @@
 package com.efrei;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -24,6 +27,11 @@ public class App
 		
 		entityManager.persist(person);
 				
+		Calendar calendar = Calendar.getInstance();
+		Date aujourdhui = calendar.getTime();
+		calendar.add(Calendar.DAY_OF_MONTH, 15);
+		Date retour = calendar.getTime();
+		
 		tx.commit();
 	}
 }
