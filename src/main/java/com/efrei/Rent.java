@@ -65,6 +65,12 @@ public class Rent {
 	public void setVehicule(Vehicule vehicule) {
 		this.vehicule = vehicule;
 	}
+
+	@Override
+	public String toString() {
+		return "Rent [key=" + key + ", beginDate=" + beginDate + ", endDate="
+				+ endDate + "]";
+	}
 	
 	
 	

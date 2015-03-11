@@ -30,6 +30,13 @@ public class Vehicule {
 	}
 	public void setRents(Set<Rent> rents) {
 		this.rents = rents;
+	}
+
+	@Override
+	public String toString() {
+		return "Vehicule [plateNumber=" + plateNumber + "]";
 	}	
+	
+	
 
 }

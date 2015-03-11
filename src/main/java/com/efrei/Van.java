@@ -14,6 +14,12 @@ public class Van extends Vehicule{
 	public void setMawWeight(int mawWeight) {
 		this.mawWeight = mawWeight;
 	}
+
+	@Override
+	public String toString() {
+		return "Van [mawWeight=" + mawWeight + ", toString()="
+				+ super.toString() + "]";
+	}
 	
 	
 
