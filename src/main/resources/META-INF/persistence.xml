@@ -5,11 +5,7 @@
     <persistence-unit name="manager1" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     
-    <class>com.efrei.Person</class>
-    <class>com.efrei.Rent</class>
-    <class>com.efrei.Vehicule</class>
-    <class>com.efrei.Car</class>
-    <class>com.efrei.Van</class>
+    <class>com.univ.Person</class>
     
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     
